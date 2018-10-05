@@ -21,7 +21,7 @@ class EmailForm(forms.Form):
                         )
   message = forms.CharField(required=False,
                             widget=forms.Textarea(
-                            attrs={'placeholder':'Your Email'
+                            attrs={'placeholder':'Your Comments'
                             }
                           )
                         )

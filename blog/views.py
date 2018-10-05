@@ -3,6 +3,7 @@ from .models import Post
 from django.views.generic import ListView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .forms import EmailForm
+from django.core.mail import send_mail
 # Create your views here.
 
 class PostList(ListView):
@@ -40,12 +41,18 @@ def post_detail(request, year, month, day, post):
 
 def post_share(request,post_id):
     post = get_object_or_404(Post, status='publish', id=post_id)
+    sent = False
     if request.method == 'POST':
         form = EmailForm(request.POST)
         if form.is_valid():
             # form field password validation
             cd = form.cleaned_data
             #send_mail...
+            post_url = request.build_absolute_uri(post.get_absolute_url())
+            subject = f"{cd['name']} ({cd['email']}) recommends you reading '{post.title}'"
+            message = f"Read '{post.title}' at {post_url}\n\n{cd['name']}'s comments: {cd['message']}"
+            send_mail(subject, message, 'pundirabhiraj@gmail.com', [cd['to']])
+            sent=True
     else:
         form = EmailForm()        
     return render(request, "blog/post/share.html", 
