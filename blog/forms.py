@@ -1,4 +1,5 @@
 from django import forms
+from .models import Comment
 
 class EmailForm(forms.Form):
   name = forms.CharField(max_length=250, 
@@ -25,3 +26,8 @@ class EmailForm(forms.Form):
                             }
                           )
                         )
+
+class CommentForm(forms.ModelForm):
+  class Meta:
+    model = Comment
+    fields = ('name', 'email', 'body')
