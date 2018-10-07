@@ -1,8 +1,8 @@
-## Building A Blog Application
+# Building A Blog Application
 
 [0 - Initial Commit](../../tree/066c994d0cc01b916c85d50b68824fa61f8e94bc/)
 
-### Creating A blog Application
+## Creating A blog Application
 
 [1 - Building Post Model](../../tree/773abcdafc72dc54747c6a0accba865c3be909b8/)
 
@@ -18,6 +18,20 @@
 
 [7 - Pagination using Classed Based views](../../tree/26f29f3918975c784512e6259b85fb055fef89f0/)
 
-### Extending Blog with Advanced Features
+## Extending Blog with Advanced Features
+
+#### Sendig Mail With Django
 
 [8 - Django Form in views](../../tree/6434e2bb6063cdd9d513677aaa1d7a61e5b83ba4/)
+
+[9 - Sending Email with Django](../../tree/43775e7353a1bff76a578e2051a91b1993962032/)
+
+#### Adding Comment System
+
+[10 - Model & Admin for Comment](../../tree/9837328a61db0b073fd5465fdcd145a84c4b469c/)
+
+[11 - Creating ModelFrom & handel in View](../../tree/11c697b6e77633feaa9ef559a0dc3ca7eaf9a0a2/)
+
+[12 - Adding comment to post detail template](../../tree/abe376ff1db92f79c264b9ef04acd2aa245a5bce/)
+
+#### Adding Tagging Functionality
