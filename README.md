@@ -38,12 +38,18 @@
 
 [13 - Add tag to Post with django-taggit](../../tree/2b95f612113c05fee7608bf8029ea4e69105207f/)
 
-[14 - Retrieving posts by similarity](../../tree/6b953cdf6eab2154b604b0ea9ddb5813c2e02c19/)
+[14 - Retrieving posts by similarity](../../tree//)
 
 ## Extending blog Application
 
-### Creating custom template tags and filter
+#### Creating custom template tags and filter
 
-### Adding a sitemap and post feed
+[15 - total_tags](../../tree/3be46bce57968cea626ccd72041d9e272d0899a0/) using simple_tag
 
-### Implementing full text search with PostgreSQL
+[16 - show_latest_post tag](../../tree/28ad09da6837c927e38dae995a1fee5e082d62ef/) using inclusion_tag
+
+[17 - get_most_commented_posts tag](../../tree/8139ee3ad76055d298bd816507a8e828a030fcef/) using simple_tag
+
+#### Adding a sitemap and post feed
+
+#### Implementing full text search with PostgreSQL
