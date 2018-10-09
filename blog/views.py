@@ -5,6 +5,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .forms import EmailForm, CommentForm
 from django.core.mail import send_mail
 from taggit.models import Tag
+from django.db.models import Count
 # Create your views here.
 
 class PostList(ListView):
@@ -55,12 +56,17 @@ def post_detail(request, year, month, day, post):
             new_comment.post = post
             new_comment.save()
     else:
-        comment_form = CommentForm()        
+        comment_form = CommentForm()  
+        #list of similar  post
+        post_tags_ids = post.tags.values_list('id', flat=True)
+        similar_post = Post.published.filter(tags__in=post_tags_ids).exclude(id=post.id)
+        similar_post = similar_post.annotate(same_tags=Count('tags')).order_by('-same_tags', '-publish')[:4]      
     return render(request, "blog/post/detail.html", 
                                                 {'post':post,
                                                 'comments':comments,
                                                 'new_comment': new_comment,  
-                                                'comment_form':comment_form})    
+                                                'comment_form':comment_form,
+                                                'similar_post':similar_post})    
 
 def post_share(request,post_id):
     post = get_object_or_404(Post, status='publish', id=post_id)
