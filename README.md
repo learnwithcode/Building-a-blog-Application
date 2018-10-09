@@ -18,9 +18,9 @@
 
 [7 - Pagination using Classed Based views](../../tree/26f29f3918975c784512e6259b85fb055fef89f0/)
 
-## Extending Blog with Advanced Features
+## Enhancing Blog with Advanced Features
 
-#### Sendig Mail With Django
+#### Sending Mail With Django
 
 [8 - Django Form in views](../../tree/6434e2bb6063cdd9d513677aaa1d7a61e5b83ba4/)
 
@@ -35,3 +35,15 @@
 [12 - Adding comment to post detail template](../../tree/abe376ff1db92f79c264b9ef04acd2aa245a5bce/)
 
 #### Adding Tagging Functionality
+
+[13 - Add tag to Post with django-taggit](../../tree/2b95f612113c05fee7608bf8029ea4e69105207f/)
+
+[14 - Retrieving posts by similarity](../../tree/6b953cdf6eab2154b604b0ea9ddb5813c2e02c19/)
+
+## Extending blog Application
+
+### Creating custom template tags and filter
+
+### Adding a sitemap and post feed
+
+### Implementing full text search with PostgreSQL
