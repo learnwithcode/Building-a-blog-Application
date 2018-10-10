@@ -38,7 +38,7 @@
 
 [13 - Add tag to Post with django-taggit](../../tree/2b95f612113c05fee7608bf8029ea4e69105207f/)
 
-[14 - Retrieving posts by similarity](../../tree//)
+[14 - Retrieving posts by similarity](../../tree/6b953cdf6eab2154b604b0ea9ddb5813c2e02c19/)
 
 ## Extending blog Application
 
@@ -53,3 +53,9 @@
 #### Adding a sitemap and post feed
 
 #### Implementing full text search with PostgreSQL
+
+[20 - Building a Search View](../../tree/af5cc552f853c851dafb86c18c1ead0127408786/)
+
+[21 - Steaming and Ranking results](../../tree/ec6a6593a3811e8ce8bc785898c635af663a454d/)
+
+[22 - Weighting queries](../../tree/dfccc07df3090c106100a68ba934dca913540758/)
