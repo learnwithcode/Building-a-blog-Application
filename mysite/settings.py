@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # }
 
 # Download Postgres form http://www.postgresql.org/download/ and 
-# create username and password form command line or while instalattion
+# create username and password form command line or while installtion
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
