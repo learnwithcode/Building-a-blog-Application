@@ -2,10 +2,11 @@ from django.shortcuts import render, get_object_or_404
 from .models import Post, Comment
 from django.views.generic import ListView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from .forms import EmailForm, CommentForm
+from .forms import EmailForm, CommentForm, SearchForm
 from django.core.mail import send_mail
 from taggit.models import Tag
 from django.db.models import Count
+from django.contrib.postgres.search import SearchVector
 # Create your views here.
 
 class PostList(ListView):
@@ -87,3 +88,18 @@ def post_share(request,post_id):
     return render(request, "blog/post/share.html", 
                                                 {'form':form,
                                                 'post':post})
+
+def post_search(request):
+    form = SearchForm()
+    query = None
+    results = []
+    if 'search' in request.GET:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['search']
+            results = Post.objects.annotate(search=SearchVector('title', 'body')
+                                            ).filter(search=query)
+    return render(request, 'blog/post/search.html',
+                                                {'form':form,
+                                                'query':query,
+                                                'results':results})                                                                                
