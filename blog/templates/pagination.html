@@ -1,13 +1,20 @@
-<div class="pagination">
-  <span class="step-links">
-    {% if page.has_previous %}
-    <a href="?page={{ page.previous_page_number }}">Previous</a>
-    {% endif %}
-    <span class="current">
-      Page {{ page.number }} of {{ page.paginator.num_pages }}.
-    </span>
-    {% if page.has_next %}
-    <a href="?page={{ page.next_page_number }}">Next</a>
-    {% endif %}
-  </span>
+<div class="center">
+
+  {% if page.has_previous %}
+  <li class="btn-floating waves-effect waves-light">
+    <a href="?page={{ page.previous_page_number }}">
+      <i class="material-icons left">chevron_left</i></a>
+  </li>
+  {% endif %}
+
+  <li class="waves-effect waves-light">
+    Page {{ page.number }} of {{ page.paginator.num_pages }}.
+  </li>
+
+  {% if page.has_next %}
+  <li class="btn-floating waves-effect waves-light">
+    <a href="?page={{ page.next_page_number }}"><i class="material-icons right">chevron_right</i></a>
+  </li>
+  {% endif %}
+
 </div>

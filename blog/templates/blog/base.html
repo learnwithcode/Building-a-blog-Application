@@ -5,28 +5,87 @@
 
 <head>
   <title>{% block title %}{% endblock %}</title>
-  <link href="{% static '/css/blog.css' %}" rel="stylesheet">
+  <link href="{% static '/css/custom.css' %}" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+
 </head>
 
-<body>
-  <div id="content">
-    {% block content %}
-    {% endblock %}
+<body class="">
+  <!-- Nav bar   -->
+  <div class="navbar-fixed">
+    <nav style="background-color: #2c3e50;">
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo center">blOgeN</a>
+      </div>
+    </nav>
   </div>
-  <div id="sidebar">
-    <h2>My blog</h2>
-    <p>This is my blog. I've written {% total_tags %} post so far.</p>
-    <h3>Latest Posts</h3>
-    {% show_latest_post %}
-    <h3>Most Commented Post</h3>
-    {% get_most_commented_posts as most_commented_posts %}
-    <ul>
-      {% for post in most_commented_posts %}
-      <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
+  <!-- Nav bar ends -->
+
+  <div class="row">
+    <div class="col xl5 l5  m5 s12">
+      <div class="card-panel teal lighten-2">
+        <h5 class="center white-text">Total Posts {% total_tags %}</h5>
+        {% show_latest_post %}
+      </div>
+      <div class="card-panel teal lighten-2">
+        <h5 class="white-text center">Most Commented Post</h5>
+        <div class="collection">
+          {% get_most_commented_posts as most_commented_posts %}
+          {% for post in most_commented_posts %}
+          <a href="{{ post.get_absolute_url }}" class="collection-item">
+            <span class="badge new" data-badge-caption="comment">{{ post.comments.count }}</span> {{ post.title }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col xl7 l7 m7 s12">
+      {% block content %}
+      {% endblock %}
+    </div>
   </div>
 
+
+
+  <footer class="page-footer" style="background-color: #2c3e50;">
+    <div class="container">
+      <div class="row">
+        <div class="col xl6 offset-xl3 l6 offset-l3  m8 offset-m2 s10 offset-1">
+          <h5 class="grey-text text-lighten-3 center">blOgeN</h5>
+          This website is created under demonstration purpose and as a part of portfolio collection and client
+          purposal. <blockquote>By Abhiraj pundir | Web developer and Prod</blockquote>
+          <i class="material-icons center">mail</i> pundirabhiraj@gmail.com
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-copyright teal lighten-2">
+      <div class="container">
+        Copyright &copy; 2018
+        <a href="#!" class="grey-text text-lighten-3 right"><i class="material-icons red-text accent-2 left">favorite_border</i>
+          Made with love</a>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script>
+    // JAVASCRIPTS STARTS HERE
+    $('.modal').modal();
+    $('#toast').click(function () {
+      Materialize.toast('Comment Added', 5000)
+    });
+
+  </script>
 </body>
 
 </html>

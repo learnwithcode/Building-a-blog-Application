@@ -1,0 +1,71 @@
+{% load blog_tags %}
+
+<!-- CARD -->
+<div class="card" style="background-color: #2b3e50;">
+  <!-- Card image -->
+  <div class="card-image">
+    {% if post.image %}
+    <a href="{{ post.get_absolute_url }}">
+      <img src="{{ post.image.url }}" alt="Post Image">
+    </a>
+    {% endif %}
+    <a class="btn-floating btn-large  red accent-3 pulse halfway-fab z-depth-5 activator waves-effect waves-light">
+      <i class="material-icons">add</i></a>
+  </div>
+  <!-- Card image ends -->
+  <!-- Card content -->
+  <div class="card-content white-text">
+    <span class="card-title activator center">
+      {{ post.title }}
+    </span>
+    <h5>Tags <i class="material-icons">loyalty
+      </i></h5>
+    {% for tag in post.tags.all %}
+    <div class="chip red accent-3">
+      <a href="{% url 'blog:post_list_by_tag' tag.slug %}" class='white-text'>
+        {{ tag.name }}
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- Card content ends -->
+  <!-- Card reaveal -->
+  <div class="card-reveal ">
+    <span class="card-title center">
+      {{ post.title }}
+      <i class="material-icons right">close</i>
+    </span>
+    <div class="card-content">
+      <blockquote>
+        <h5>Tags <i class="material-icons">loyalty</i></h5>
+      </blockquote>
+      {% for tag in post.tags.all %}
+      <div class="chip">
+        <a href="{% url 'blog:post_list_by_tag' tag.slug %}">
+          {{ tag.name }}
+        </a>
+      </div>
+      {% endfor %}
+      <h6>
+        <i class="material-icons">publish</i>
+        {{ post.publish }}
+      </h6>
+      <h6>
+        <i class="material-icons">person</i>
+        {{ post.author }}
+      </h6>
+      <hr />
+      <p>{{ post.body|markdown|truncatewords_html:100 }}</p>
+    </div>
+    <!-- Card reaveal ends -->
+    <!-- Card action -->
+    <div class="card-action">
+      <a href="{{ post.get_absolute_url }}" class="btn  red accent-3 z-depth-5 left waves-effect waves-light">
+        <i class="material-icons left">visibility</i>read</a>
+      <a href="{% url 'blog:post_share' post.id %}" class="btn red accent-3 z-depth-5 right waves-effect waves-light">
+        <i class="material-icons right">screen_share</i>Share</a>
+    </div>
+    <!-- Card action ends -->
+  </div>
+</div>
+<!-- CARD ENDS -->

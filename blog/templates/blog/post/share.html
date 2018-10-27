@@ -1,16 +1,50 @@
 {% extends 'blog/base.html' %}
 
-{% block title %}Sahre a post{% endblock %}
+{% block title %}Sahre {{ post.title }} | blOgeN{% endblock %}
 
 {% block content%}
+
+<!-- EMAIL SENT SUCCESS MESSAGE -->
 {% if sent %}
-<h1>E-mail Successfully sent</h1>
-<p>"{{ post.title }}" was Successfully sent to {{ form.cleaned_data.to}}</p>
+<div class="card-panel teal lighten-2">
+  <h4 class="center white-text">E-mail Successfully sent</h4>
+  <p class="center white-text">"{{ post.title }}" was Successfully sent to {{ form.cleaned_data.to}}</p>
+</div>
 {% else %}
-<h1>Share "{{ post.title }}" by e-mail </h1>
-<form method="post">{% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" value="Send e-mail">
-</form>
+<!-- MAIL SENT SUCCESS MESSAGE ENDS -->
+<!-- SHARE POST HEADING -->
+<div class="card-panel teal lighten-2">
+  <h4 class="center white-text">Share "{{ post.title }}" by E-mail </h4>
+</div>
+<!-- SHARE POST HEADING ENDS -->
+<!-- SHARE FORM -->
+<div class="card-panel">
+  <form action="/" method="post">{% csrf_token %}
+    <div class="input-field teal-text">
+      <i class="material-icons prefix">person</i>
+      {{ form.name}}
+      {{ form.name.label_tag }}
+    </div>
+    <div class="input-field teal-text">
+      <i class="material-icons prefix">mail</i>
+      {{ form.email}}
+      {{ form.email.label_tag }}
+    </div>
+    <div class="input-field teal-text">
+      <i class="material-icons prefix">mail</i>
+      {{ form.to }}
+      {{ form.to.label_tag }}
+    </div>
+    <div class="input-field teal-text">
+      <i class="material-icons prefix">comment</i>
+      {{ form.message}}
+      {{ form.message.label_tag }}
+    </div>
+    <div class="center">
+      <input id="toast1" type="submit" value="Send E-mail" class="btn-large waves-effect waves-light  z-depth-5">
+    </div>
+  </form>
+</div>
+<!-- SHARE FORM ENDS -->
 {% endif %}
 {% endblock %}

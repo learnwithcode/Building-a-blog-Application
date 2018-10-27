@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
     'taggit',
+    'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,17 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': '****',
+#     }
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -120,8 +132,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # settings for 
 # SMTP SERVER
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'yourmail@gmail.com'
-EMAIL_HOST_PASSWORD = '********'
+EMAIL_HOST_USER = '*******'
+EMAIL_HOST_PASSWORD = '******'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # Static files (CSS, JavaScript, Images)

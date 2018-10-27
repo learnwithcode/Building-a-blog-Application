@@ -6,6 +6,7 @@ from .forms import EmailForm, CommentForm, SearchForm
 from django.core.mail import send_mail
 from taggit.models import Tag
 from django.db.models import Count
+from django.contrib.postgres.search import SearchVector, SearchRank, SearchQuery
 # Create your views here.
 
 class PostList(ListView):
@@ -20,7 +21,7 @@ def post_list(request, tag_slug=None):
     if tag_slug:
         tag = get_object_or_404(Tag, slug=tag_slug)
         object_list = object_list.filter(tags__in=[tag])
-    paginator = Paginator(object_list, 1) # 3 posts in each page
+    paginator = Paginator(object_list, 2) # 3 posts in each page
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)
@@ -30,11 +31,27 @@ def post_list(request, tag_slug=None):
     except EmptyPage:
         # If page is out of range deliver last page of results
         posts = paginator.page(paginator.num_pages)
+        #search
+    form = SearchForm()
+    query = None
+    results = []
+    if 'search' in request.GET:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['search']
+            search_vector = SearchVector('title', weight='A') + SearchVector('body', weight='B') #default weights are D, C, B AND A refer to 0.1, 0.2, 0.4, and 1.0 respectively
+            search_query = SearchQuery(query)
+            results = Post.objects.annotate(search=search_vector,
+                                            rank=SearchRank(search_vector, search_query)
+                                            ).filter(rank__gte=0.3).order_by('-rank')
     return render(request,
                   'blog/post/list.html',
                   {'page': page,
                    'posts': posts,
-                   'tag':tag})
+                   'tag':tag,
+                   'form':form,
+                    'query':query,
+                    'results':results})
 
 
 def post_detail(request, year, month, day, post):
@@ -46,6 +63,10 @@ def post_detail(request, year, month, day, post):
     #list of active comment  for the post
     comments = post.comments.filter(active=True)
     new_comment = None
+    #list of similar  post
+    post_tags_ids = post.tags.values_list('id', flat=True)
+    similar_post = Post.published.filter(tags__in=post_tags_ids).exclude(id=post.id)
+    similar_post = similar_post.annotate(same_tags=Count('tags')).order_by('-same_tags', '-publish')[:5]      
     if request.method == 'POST':
         #A commen was posted
         comment_form = CommentForm(request.POST)
@@ -55,12 +76,10 @@ def post_detail(request, year, month, day, post):
             #Assign a current Post to the comment
             new_comment.post = post
             new_comment.save()
+            
     else:
         comment_form = CommentForm()  
-        #list of similar  post
-        post_tags_ids = post.tags.values_list('id', flat=True)
-        similar_post = Post.published.filter(tags__in=post_tags_ids).exclude(id=post.id)
-        similar_post = similar_post.annotate(same_tags=Count('tags')).order_by('-same_tags', '-publish')[:4]      
+
     return render(request, "blog/post/detail.html", 
                                                 {'post':post,
                                                 'comments':comments,
@@ -80,7 +99,7 @@ def post_share(request,post_id):
             post_url = request.build_absolute_uri(post.get_absolute_url())
             subject = f"{cd['name']} ({cd['email']}) recommends you reading '{post.title}'"
             message = f"Read '{post.title}' at {post_url}\n\n{cd['name']}'s comments: {cd['message']}"
-            send_mail(subject, message, 'pundirabhiraj@gmail.com', [cd['to']])
+            send_mail(subject, message, cd['email'], [cd['to']])
             sent=True
     else:
         form = EmailForm()        
@@ -88,20 +107,4 @@ def post_share(request,post_id):
                                                 {'form':form,
                                                 'post':post})
 
-# def post_search(request):
-#     form = SearchForm()
-#     query = None
-#     results = []
-#     if 'search' in request.GET:
-#         form = SearchForm(request.GET)
-#         if form.is_valid():
-#             query = form.cleaned_data['search']
-#             search_vector = SearchVector('title', weight='A') + SearchVector('body', weight='B') #default weights are D, C, B AND A refer to 0.1, 0.2, 0.4, and 1.0 respectively
-#             search_query = SearchQuery(query)
-#             results = Post.objects.annotate(search=search_vector,
-#                                             rank=SearchRank(search_vector, search_query)
-#                                             ).filter(rank__gte=0.3).order_by('-rank')
-#     return render(request, 'blog/post/search.html',
-#                                                 {'form':form,
-#                                                 'query':query,
-#                                                 'results':results})                                                                                
+                                                                              

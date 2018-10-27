@@ -1,26 +1,33 @@
-{% extends 'blog/base.html' %}
-{% block title %}Search{% endblock %}
+<!-- SEARCH BOX -->
+<nav class="white">
+  <div class="nav-wrapper">
+    <form action="." method="get">
+      <div class="input-field">
+        {{ form }}
+        <label><i class="material-icons blue-grey-text">search</i></label>
+        <i class="material-icons">close</i>
+      </div>
+    </form>
 
-{% block content %}
+  </div>
+</nav>
+<!-- SEARCH BOX ENDS -->
+
+<!-- RESULTS -->
 {% if query %}
-<h1>Posts containing "{{ query }}"</h1>
-<h3>
-    {% with results.count as total_results %}
-    Found {{ total_results }} result{{ total_results|pluralize}}
-    {% endwith %}
-</h3>
+<div class="card-panel teal lighten-2">
+  <h4 class="center white-text">Posts containing "{{ query }}"</h4>
+</div>
+<h5>
+  {% with results.count as total_results %}
+  Found {{ total_results }} result{{ total_results|pluralize}}
+  {% endwith %}
+</h5>
 {% for post in results %}
-<h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
-{{ post.body|truncatewords:5 }}
+{% include 'blog/post/list_snippet.html' %}
 {% empty %}
-<p>There are no results for your query.</p>
+<p class="red-text">There are no results for your query.</p>
 {% endfor %}
-<p><a href="{% url 'blog:post_search' %}">Search again</a></p>
-{% else %}
-<h1>Seach For posts</h1>
-<form action="." method="get">
-    {{ form.as_p }}
-    <input type="submit" value="Search">
-</form>
+<hr />
 {% endif %}
-{% endblock %}
+<!-- RESULTS ENDS -->

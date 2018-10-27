@@ -1,35 +1,23 @@
 {% extends "blog/base.html" %}
 {% load blog_tags %}
 
-{% block title %}My Blog{% endblock %}
+{% block title %}blOgeN{% endblock %}
 
 {% block content %}
-{% if tag %}
-<h2>Posts tagged with "{{ tag.name }}"</h2>
-{% endif %}
-<h1>My Blog</h1>
-{% for post in posts %}
-{% if post.image %}
-<img src="{{ post.image.url }}" alt="">
-{% endif %}
-<h2>
-  <a href="{{ post.get_absolute_url }}">
-    {{ post.title }}
-  </a>
-</h2>
-<p class="tags">
-  Tags:
-  {% for tag in post.tags.all %}
-  <a href="{% url 'blog:post_list_by_tag' tag.slug %}">
-    {{ tag.name }},
-  </a>
 
-  {% endfor %}
-</p>
-<p class="date">
-  Published {{ post.publish }} by {{ post.author }}
-</p>
-{{ post.body|markdown|truncatewords_html:30 }}
+{% include 'blog/post/search.html' %}
+
+<!-- POST WITH TAGS HEDING -->
+{% if tag %}
+<div class="card-panel teal lighten-2">
+  <h4 class="center white-text">Posts tagged with "{{ tag.name }}"</h4>
+</div>
+{% endif %}
+<!-- POST WITH TAGS HEDING ENDS -->
+
+{% for post in posts %}
+{% include 'blog/post/list_snippet.html' %}
 {% endfor %}
+
 {% include 'pagination.html' with page=posts %}
 {% endblock %}

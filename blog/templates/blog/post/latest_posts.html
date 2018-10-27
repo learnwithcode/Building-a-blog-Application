@@ -1,7 +1,30 @@
-<ul>
+{% load blog_tags %}
+<ul class="collapsible">
     {% for post in latest_posts %}
     <li>
-        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+        <div class="collapsible-header teal-text">
+            <i class="material-icons">visibility</i>
+            {{ post.title }}
+            <span class="badge new" data-badge-caption="new"></span>
+        </div>
+        <div class="collapsible-body">
+            <div class="card">
+                <div class="card-image">
+                    {% if post.image %}
+                    <a href="{{ post.get_absolute_url }}">
+                        <img src="{{ post.image.url }}" alt="Post-Image">
+                    </a>
+                    {% endif %}
+                </div>
+                <div class="card-content">
+                    <span class="card-title">{{ post.title }}</span>
+                    <p>{{ post.body|markdown|truncatewords:20 }}</p>
+                    <div class="card-action">
+                        <a href="{{ post.get_absolute_url }}" class="center">Read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </li>
     {% endfor %}
 </ul>
