@@ -50,8 +50,6 @@
 
 [17 - get_most_commented_posts tag](../../tree/8139ee3ad76055d298bd816507a8e828a030fcef/) using simple_tag
 
-#### Adding a sitemap and post feed
-
 #### Implementing full text search with PostgreSQL
 
 [20 - Building a Search View](../../tree/af5cc552f853c851dafb86c18c1ead0127408786/)
