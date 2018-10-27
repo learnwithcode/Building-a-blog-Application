@@ -74,11 +74,11 @@ and create password while installation process default name & username is postgr
 * cd blogen
 * .\scripts\activate
 * mkdir src && cd src
-* git clone https://github.com/learnwithcode/Building-a-blog-Application.git .
+* git clone https://github.com/learnwithcode/Building-a-blog-Application.git .  <=notice include period 
 * pip install -r requirements.txt
 ##### open settings.py in src/mysite/ and uncomment postgres database settings and put your password of postgres you created above
-* python manage.py 
+* python manage.py migrate
+* python manage.py createsuperuser
 * python manage.py loaddata blog/fixtures/post.json
 * python manage.py loaddata blog/fixtures/tag.json
-* python manage.py createsuperuser
 * python manage.py runserver
