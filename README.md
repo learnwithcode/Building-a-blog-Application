@@ -57,3 +57,28 @@
 [21 - Steaming and Ranking results](../../tree/ec6a6593a3811e8ce8bc785898c635af663a454d/)
 
 [22 - Weighting queries](../../tree/dfccc07df3090c106100a68ba934dca913540758/)
+
+## How to clone project
+
+### Install depndencies first
+
+* Download & Install python latest version if not
+* Download & Install Git if not
+* Download & Install Postgresql database [Download](https://www.postgresql.org/download/windows/)
+and create password while installation process default name & username is postgres
+
+#### Commands
+
+* cd desktop
+* virtualenv blogen
+* cd blogen
+* .\scripts\activate
+* mkdir src && cd src
+* git clone https://github.com/learnwithcode/Building-a-blog-Application.git .
+* pip install -r requirements.txt
+##### open settings.py in src/mysite/ and uncomment postgres database settings and put your password of postgres you created above
+* python manage.py 
+* python manage.py loaddata blog/fixtures/post.json
+* python manage.py loaddata blog/fixtures/tag.json
+* python manage.py createsuperuser
+* python manage.py runserver
