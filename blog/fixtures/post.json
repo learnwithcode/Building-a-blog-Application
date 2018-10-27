@@ -3,14 +3,14 @@
     "model": "blog.post",
     "pk": 1,
     "fields": {
-        "title": "React",
-        "image": "blog_posts/18/10/26/james-pond-185593-unsplash.jpg",
+        "title": "Complete WordPress Website Business",
+        "image": "blog_posts/18/10/27/artem-sapegin-180146-unsplash.jpg",
         "author": 1,
-        "slug": "react",
-        "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quae voluptatum ut temporibus distinctio quibusdam id qui doloremque illo animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quae voluptatum ut temporibus distinctio quibusdam id qui doloremque illo animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quae voluptatum ut temporibus distinctio quibusdam id qui doloremque illo animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quae voluptatum ut temporibus distinctio quibusdam id qui doloremque illo animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quae voluptatum ut temporibus distinctio quibusdam id qui doloremque illo animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quae voluptatum ut temporibus distinctio quibusdam id qui doloremque illo animi.",
-        "publish": "2018-10-26T15:00:52Z",
-        "created": "2018-10-26T15:01:25.762Z",
-        "updated": "2018-10-26T15:47:14.902Z",
+        "slug": "complete-wordpress-website-business",
+        "body": "With WordPress powering more than 25% of all websites in the world, there's never been a better time to build an income and a business around it.\r\n\r\nYou're here because you want to master WordPress, right? Good idea. You're in the right place. And, you can do it without learning any programming or coding.\r\n\r\nWhile WordPress is open source, and because of that has thousands of developers building resources for it, it still takes quite a bit of learning to become a master at building and managing websites with it. It's not just learning the WordPress software, there's a small amount of graphic design knowledge needed, hosting and server management, troubleshooting broken sites or problems by hacking into the back end and server setup, and properly staging development environments around new sites or when performing updates and changes on existing sites.\r\n\r\n\"What a great course! Good explanation and a lot to learn, friendly and very quick support. I'm only at the beginning and I'll leave another review later after I finished this course. I'm sure there is much more to learn!\" --Adriene\r\n\r\nWhy am I qualified to teach you?\r\n\r\nThrough this course, I'll teach you everything I've learned and mastered\r\nthrough 10 years of building, managing, migrating, and hosting WordPress websites.\r\n\r\n\"He is concise and well spoken, without dumbing it down at all. As a total newbie to Wordpress, I'm thankful he's offering this! 3 lessons in and it's great so far.\" --Jamie Rasmussen\r\n\r\nMy business lets me work on my own schedule, manage my home workspace\r\nwithout a boss or a manager, and gives me an unlimited ceiling for profit and income and time freedom.",
+        "publish": "2018-10-27T09:57:05Z",
+        "created": "2018-10-27T10:02:26.826Z",
+        "updated": "2018-10-27T10:02:26.826Z",
         "status": "publish"
     }
 },
@@ -18,14 +18,59 @@
     "model": "blog.post",
     "pk": 2,
     "fields": {
-        "title": "Django",
-        "image": "blog_posts/18/10/26/action-blur-electronics-247932.jpg",
+        "title": "Advanced CSS and Sass: Flexbox, Grid, Animations and More!",
+        "image": "blog_posts/18/10/27/kobu-agency-409288-unsplash.jpg",
         "author": 1,
-        "slug": "django",
-        "body": "distinctio quibusdam id qui doloremque illo animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quae voluptatum ut temporibus distinctio quibusdam id qui doloremque illo animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quae voluptatum ut temporibus distinctio quibusdam id qui doloremque illo animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quae voluptatum ut temporibus distinctio quibusdam id qui doloremque illo animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quae voluptatum ut temporibus distinctio quibusdam id qui doloremque illo animi. distinctio quibusdam id qui doloremque illo animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quae voluptatum ut temporibus distinctio quibusdam id qui doloremque illo animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quae voluptatum ut temporibus distinctio quibusdam id qui doloremque illo animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quae voluptatum ut temporibus distinctio quibusdam id qui doloremque illo animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quae voluptatum ut temporibus distinctio quibusdam id qui doloremque illo animi.",
-        "publish": "2018-10-26T15:47:19Z",
-        "created": "2018-10-26T15:47:51.999Z",
-        "updated": "2018-10-26T15:47:51.999Z",
+        "slug": "advanced-css-and-sass-flexbox-grid-animations-and-more",
+        "body": "Have you been coding CSS for some time, but want to take your game to the next level? Do you feel confused with CSS jargon like inheritance, specificity or the cascade?\r\n\r\nWhat if there was one resource, one place, where you could learn all the advanced and modern CSS techniques and properties you've been reading about?\r\n\r\nGood news: there is!\r\n\r\nWelcome to \"Advanced CSS and Sass\", the most advanced, the most modern, and the most complete CSS course on the internet. It's everything you want in an advanced CSS course, and more.\r\n\r\nYou will learn complex CSS animations, advanced responsive design techniques, flexbox layouts, Sass, CSS architecture, fundamental CSS concepts, and so much more.\r\n\r\nLike in all my courses, you will build beautiful and carefully designed projects, that will make you proud of yourself and leave you ready to build complex projects on your own.\r\n\r\nAfter finishing this course, you will:\r\n\r\n1) Be up to speed with the most modern and advanced CSS properties and techniques;\r\n\r\n2) Have mastered the cutting-edge layout technologies Flexbox and CSS Grid;\r\n\r\n3) Be ready to build responsive layouts for all kind of devices and situations;\r\n\r\n4) Truly understand how CSS works behind the scenes;\r\n\r\n5) Be able to architect large CSS codebases for reusability and maintainability using Sass.\r\n\r\nPlease note that this course is NOT for absolute beginners, so you should already be at an intermediate level in HTML and CSS (please check out my other course if that's not the case).\r\n\r\n \r\n\r\nThis course is massive, coming in at 20+ hours. Here is exactly what you will learn:\r\n\r\n\u2022 Tons of modern cutting-edge CSS techniques to create stunning designs and effects: clip-path, background-clip, mask-image, background-blend-mode, shape-outside, filter, backdrop-filter, object-fit, transform, column-count, hyphens, perspective, calc() and custom CSS properties;\r\n\r\n\u2022 Advanced CSS animations with @keyframes, animation and transition;\r\n\r\n\u2022 Advanced CSS selectors, pseudo-classes and pseudo-elements required for modern CSS development;\r\n\r\n\u2022 How CSS works behind the scenes: the cascade, specificity, inheritance, value processing, the visual formatting model, the box model, box types, positioning schemes and stacking contexts;\r\n\r\n\u2022 CSS architecture: The 7-1 rule, component-based design, the BEM methodology, writing reusable, maintainable and scalable code;\r\n\r\n\u2022 Introduction to Sass: variables, nesting, partials, imports, mixins, functions, extends, and more;\r\n\r\n\u2022 Using Sass in real-world projects: setting global variables, building for reusability, architecting CSS and managing media queries;\r\n\r\n\u2022 The NPM ecosystem: setting up a development process to compile Sass and automatic browser reload, and creating a build process to concatenate, prefix and compress CSS files;\r\n\r\n\u2022 Modern responsive design: fluid grids, layout types, flexible images, using media queries to test for different screen widths, pixel densities and touch capabilities;\r\n\r\n\u2022 Advanced responsive design workflows: mobile-first vs desktop-first strategies, selecting breakpoints, em vs rem units and feature queries to test for browser support;\r\n\r\n\u2022 Responsive images in HTML and CSS for faster pageloads: resolution switching, density switching, art direction;\r\n\r\n\u2022 SVG images in HTML and CSS: how and why to use SVG, generating SVG sprites, changing SVG colors in CSS and best practices;\r\n\r\n\u2022 Videos in HTML and CSS: building a background video effect;\r\n\r\n\u2022 Flexbox layouts: main concepts, introduction to both flex container and flex item specific properties, advanced positioning techniques applied to a huge real-world project;\r\n\r\n\u2022 CSS Grid layouts: main concepts, CSS grid vs flexbox, and layout techniques applied to a real-world project. This part alone could be an entire course!",
+        "publish": "2018-10-27T10:07:41Z",
+        "created": "2018-10-27T10:11:05.732Z",
+        "updated": "2018-10-27T10:11:06.280Z",
+        "status": "publish"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 3,
+    "fields": {
+        "title": "The Complete Node.js Developer Course (2nd Edition)",
+        "image": "blog_posts/18/10/27/simon-abrams-286276-unsplash.jpg",
+        "author": 1,
+        "slug": "complete-nodejs-developer-course-2nd-edition",
+        "body": "Have you tried to learn Node before? You start a new course, and the instructor has you installing a bunch of libraries before you even know what Node is or how it works. You eventually get stuck and reach out to the instructor, but you get no reply. You then close the course and never open it again.\r\n\r\nSound familiar?\r\n\r\nI created this course to be what I wanted when I was learning Node.\r\n\r\nThe Complete Node.js Developer Course 2 covers the fundamentals of Node before diving deep into great tools like Express, Mongoose, and MongoDB.\r\n\r\nThe entire course is based around a single goal: Turning you into a professional Node developer capable of developing, testing, and deploying real-world production applications.\r\n\r\nThe best way to learn Node is by building Node apps.\r\n\r\nFrom the very start you\u2019ll be programming every project and working through challenges that I\u2019ve designed to reinforce what you\u2019ve learned. This will give you the hands-on experience necessary to be able to create and launch your own project once you\u2019re done.\r\n\r\nYou\u2019ll be building four projects:\r\n\r\nA note-taking app to get your feet wet\r\nA weather application that interacts with Google Maps and Dark Sky API\r\nA to-do REST API complete with user accounts and authentication\r\nA real-time chat app with a client-side companion\r\nBy the end, you\u2019ll be able to take what you\u2019ve learned and launch your own Node application.\r\n\r\nWhen learning, learn the latest.\r\n\r\nI work to keep this course full of the most up-to-date Node material out there. This course is compatible with Node.js version 8, the newest Node version available.\r\n\r\nYou\u2019re getting access to hot-off-the-press features.\r\n\r\nEverything you need comes in one easy-to-use package.\r\n\r\nYou can stop worrying if you're learning the right skills to build an app or land a new job. I've curated all the tech that's essential to building real-world apps. I've mapped out everything in a comprehensive, easy-to-follow package designed to get you up and running in a few weeks.\r\n\r\nThere\u2019s no better time to learn Node.\r\n\r\nAccording to the 2016 Stack Overflow Survey, Node is in the top ten for back-end popularity and back-end salary, with an average salary of $85k. This means more jobs and more opportunities for you.\r\n\r\nYou might get stuck. But I\u2019m here to help.\r\n\r\nThere\u2019s nothing worse than getting five hours into a course, getting stuck, and not getting the help you need to continue.\r\n\r\nI\u2019m in the Q&A everyday to help you get unstuck. I reply to every question to get you back on track.\r\n\r\nDon\u2019t take my word for it. Check the reviews and see what other students are saying.\r\n\r\n\u201cAny questions people seem to have are answered swiftly, clearly, and often with examples posted on GitHub. Even when the questions asked are out of the scope of the course Andrew seems to come up trumps.\" - Adam Tait",
+        "publish": "2018-10-27T10:15:35Z",
+        "created": "2018-10-27T10:18:33.031Z",
+        "updated": "2018-10-27T10:21:22.330Z",
+        "status": "publish"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 4,
+    "fields": {
+        "title": "Python and Django Full Stack Web Developer Bootcamp",
+        "image": "blog_posts/18/10/27/david-rangel-708765-unsplash.jpg",
+        "author": 1,
+        "slug": "python-and-django-full-stack-web-developer-bootcamp",
+        "body": "Welcome to the Python and Django Full Stack Web Developer Bootcamp! In this course we cover everything you need to know to build a website using Python, Django, and many more web technologies!\r\n\r\nWhether you want to change career paths, expand your current skill set, start your own entrepreneurial business, become a consultant, or just want to learn, this is the course for you!\r\n\r\nWe will teach you the latest technologies for building great web applications with Python 3 and Django! But we don't just teach that, we also teach the Front End technologies you need to know, including HTML, CSS, and Javascript. This course can be your one stop shop for everything you need! It will serve as a useful reference for many of your questions as you begin your journey in becoming a web developer!\r\n\r\nThis course is designed so that anyone can learn how to become a web developer. We teach you how to program by using HD Video Lectures, Walkthrough Code Projects, Exercises, Concept Presentation Slides, Downloadable Code Notes, Reading Assignments, and much more!",
+        "publish": "2018-10-27T10:23:19Z",
+        "created": "2018-10-27T10:27:31.544Z",
+        "updated": "2018-10-27T10:27:31.544Z",
+        "status": "publish"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 5,
+    "fields": {
+        "title": "React 16 - The Complete Guide (incl. React Router 4 & Redux)",
+        "image": "blog_posts/18/10/27/fotis-fotopoulos-790373-unsplash.jpg",
+        "author": 1,
+        "slug": "react-16-complete-guide-incl-react-router-4-redux",
+        "body": "Learn React or dive deeper into it. Learn the theory, solve assignments, practice in demo projects and build one big application which is improved throughout the course: The Burger Builder!\r\n\r\nMore details please!\r\n\r\nJavaScript is the major driver of modern web applications since it's the only programming language which runs in the browser and hence allows you to provide highly reactive apps. You'll be able to achieve mobile-app like user experiences in the web.\r\n\r\nBut using JavaScript can be challenging - it quickly becomes overwhelming to create a nice web app with vanilla JavaScript and jQuery only.\r\n\r\nReact to the rescue! \r\n\r\nReact is all about components - basically custom HTML elements - with which you can quickly build amazing and powerful web apps. Just build a component once, configure it to your needs, dynamically pass data into it (or listen to your own events!) and re-use it as often as needed.\r\n\r\nNeed to display a list of users in your app? It's as simple as creating a \"User\" component and outputting it as often as needed.\r\n\r\nThis course will start at the very basics and explain what exactly React is and how you may use it (and for which kind of apps). Thereafter, we'll go all the way from basic to advanced. We'll not just scratch the surface but dive deeply into React as well as popular libraries like react-router and Redux. \r\n\r\nBy the end of the course, you can build amazing React (single page) applications!\r\n\r\nA detailed list with the course content can be found below.\r\n\r\nWho's teaching you in this course?\r\n\r\nMy name is Maximilian Schwarzm\u00fcller, I'm a freelance web developer and worked with React in many projects. I'm also a 5-star rated instructor here on Udemy. I cover React's most popular alternatives - Vue and Angular - as well as many other topics. I know what I'm talking about and I know where the pain points can be found.\r\n\r\nIt's my goal to get you started with React as quick as possible and ensure your success. But I don't just focus on students getting started. I want everyone to benefit from my courses, that's why we'll dive deeply into React and why I made sure to also share knowledge that's helpful to advanced React developers.",
+        "publish": "2018-10-27T10:29:22Z",
+        "created": "2018-10-27T10:34:15.790Z",
+        "updated": "2018-10-27T10:34:15.790Z",
         "status": "publish"
     }
 },
@@ -33,12 +78,12 @@
     "model": "blog.comment",
     "pk": 1,
     "fields": {
-        "post": 1,
+        "post": 2,
         "name": "ABHIRAJ PUNDIR",
         "email": "pundirbahiraj@gmail.com",
-        "body": "one comment",
-        "created": "2018-10-26T15:14:26.402Z",
-        "updated": "2018-10-26T15:14:26.402Z",
+        "body": "Comment one",
+        "created": "2018-10-27T10:36:07.329Z",
+        "updated": "2018-10-27T10:36:07.330Z",
         "active": true
     }
 },
@@ -46,12 +91,12 @@
     "model": "blog.comment",
     "pk": 2,
     "fields": {
-        "post": 1,
-        "name": "shwetapatwal",
-        "email": "shwetapatwal013@gmail.com",
-        "body": "two comment",
-        "created": "2018-10-26T15:15:34.901Z",
-        "updated": "2018-10-26T15:15:34.901Z",
+        "post": 5,
+        "name": "ABHIRAJ PUNDIR",
+        "email": "pundirbahiraj@gmail.com",
+        "body": "Comment Two",
+        "created": "2018-10-27T10:37:10.542Z",
+        "updated": "2018-10-27T10:37:10.542Z",
         "active": true
     }
 },
@@ -60,11 +105,11 @@
     "pk": 3,
     "fields": {
         "post": 1,
-        "name": "NETRA PAL SINGH",
-        "email": "pundirabhiraj@gmail.com",
-        "body": "three coment",
-        "created": "2018-10-26T15:57:24.105Z",
-        "updated": "2018-10-26T15:57:24.105Z",
+        "name": "ABHIRAJ PUNDIR",
+        "email": "pundirbahiraj@gmail.com",
+        "body": "Comment Four",
+        "created": "2018-10-27T10:38:20.540Z",
+        "updated": "2018-10-27T10:38:20.540Z",
         "active": true
     }
 },
@@ -72,12 +117,12 @@
     "model": "blog.comment",
     "pk": 4,
     "fields": {
-        "post": 1,
+        "post": 4,
         "name": "ABHIRAJ PUNDIR",
         "email": "pundirbahiraj@gmail.com",
-        "body": "Four Comment",
-        "created": "2018-10-26T16:12:19.200Z",
-        "updated": "2018-10-26T16:12:19.200Z",
+        "body": "Comment Three",
+        "created": "2018-10-27T10:39:53.559Z",
+        "updated": "2018-10-27T10:39:53.559Z",
         "active": true
     }
 },
@@ -85,12 +130,12 @@
     "model": "blog.comment",
     "pk": 5,
     "fields": {
-        "post": 1,
+        "post": 3,
         "name": "ABHIRAJ PUNDIR",
         "email": "pundirbahiraj@gmail.com",
-        "body": "Five comment",
-        "created": "2018-10-26T16:14:50.473Z",
-        "updated": "2018-10-26T16:14:50.473Z",
+        "body": "Comment Five",
+        "created": "2018-10-27T10:41:02.743Z",
+        "updated": "2018-10-27T10:41:02.743Z",
         "active": true
     }
 },
@@ -98,12 +143,12 @@
     "model": "blog.comment",
     "pk": 6,
     "fields": {
-        "post": 1,
+        "post": 5,
         "name": "ABHIRAJ PUNDIR",
         "email": "pundirbahiraj@gmail.com",
-        "body": "six comment",
-        "created": "2018-10-26T16:17:22.384Z",
-        "updated": "2018-10-26T16:17:22.384Z",
+        "body": "Comment Six",
+        "created": "2018-10-27T10:42:09.353Z",
+        "updated": "2018-10-27T10:42:09.353Z",
         "active": true
     }
 },
@@ -111,12 +156,12 @@
     "model": "blog.comment",
     "pk": 7,
     "fields": {
-        "post": 1,
-        "name": "shwetapatwal",
-        "email": "shwetapatwal013@gmail.com",
-        "body": "Seven comment",
-        "created": "2018-10-26T16:20:50.315Z",
-        "updated": "2018-10-26T16:20:50.315Z",
+        "post": 4,
+        "name": "ABHIRAJ PUNDIR",
+        "email": "pundirbahiraj@gmail.com",
+        "body": "Commen Seven",
+        "created": "2018-10-27T10:43:00.781Z",
+        "updated": "2018-10-27T10:43:00.781Z",
         "active": true
     }
 },
@@ -124,12 +169,12 @@
     "model": "blog.comment",
     "pk": 8,
     "fields": {
-        "post": 1,
+        "post": 2,
         "name": "ABHIRAJ PUNDIR",
         "email": "pundirbahiraj@gmail.com",
-        "body": "Eight Comment",
-        "created": "2018-10-26T16:22:48.466Z",
-        "updated": "2018-10-26T16:22:48.466Z",
+        "body": "Commen Seven",
+        "created": "2018-10-27T10:44:23.147Z",
+        "updated": "2018-10-27T10:44:23.147Z",
         "active": true
     }
 },
@@ -137,12 +182,12 @@
     "model": "blog.comment",
     "pk": 9,
     "fields": {
-        "post": 1,
+        "post": 5,
         "name": "ABHIRAJ PUNDIR",
         "email": "pundirbahiraj@gmail.com",
-        "body": "Nine Comment",
-        "created": "2018-10-26T16:24:23.212Z",
-        "updated": "2018-10-26T16:24:23.212Z",
+        "body": "Commen Nine",
+        "created": "2018-10-27T10:45:22.269Z",
+        "updated": "2018-10-27T10:45:22.269Z",
         "active": true
     }
 },
@@ -150,12 +195,12 @@
     "model": "blog.comment",
     "pk": 10,
     "fields": {
-        "post": 1,
+        "post": 5,
         "name": "ABHIRAJ PUNDIR",
         "email": "pundirbahiraj@gmail.com",
-        "body": "Ten comment",
-        "created": "2018-10-26T16:25:15.354Z",
-        "updated": "2018-10-26T16:25:15.355Z",
+        "body": "Comment Ten",
+        "created": "2018-10-27T10:46:04.812Z",
+        "updated": "2018-10-27T10:46:04.812Z",
         "active": true
     }
 }
