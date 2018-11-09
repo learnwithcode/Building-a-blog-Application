@@ -4,7 +4,7 @@
 {% block title %}blOgeN{% endblock %}
 
 {% block content %}
-
+<div class="container">
 {% include 'blog/post/search.html' %}
 
 <!-- POST WITH TAGS HEDING -->
@@ -20,4 +20,5 @@
 {% endfor %}
 
 {% include 'pagination.html' with page=posts %}
+</div>
 {% endblock %}
