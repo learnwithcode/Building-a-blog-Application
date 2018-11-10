@@ -3,6 +3,8 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
 from taggit.managers import TaggableManager
+from ckeditor_uploader.fields import RichTextUploadingField
+from ckeditor.fields import RichTextField
 # Create your models here.
 
 class PublishedManager(models.Manager):
@@ -21,7 +23,8 @@ class Post(models.Model):
                             related_name='blog_posts')
   slug = models.SlugField(max_length=250,
                                         unique_for_date='publish')
-  body = models.TextField()                                      
+  # body = models.TextField()   
+  body = RichTextUploadingField(external_plugin_resources=[('youtube', '/static/vendors/ckeditor_plugins/youtube/', 'plugin.js',)])                                  
   publish = models.DateTimeField(default=timezone.now)
   created =  models.DateTimeField(auto_now_add=True)
   updated =  models.DateTimeField(auto_now=True)
