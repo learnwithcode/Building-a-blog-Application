@@ -4,7 +4,6 @@
 {% block title %}{{ post.title }} | blOgeN{% endblock %}
 
 {% block content %}
-<div class="container">
 <!-- Comments forms and Modal -->
 
 {% if new_comment %}
@@ -52,13 +51,13 @@
   <a href="#modal1" class="btn-large modal-trigger waves-effect waves-light  z-depth-5"><i class="material-icons left">comment</i>
     Comment</a>
 </p>
-</div>
+
 <!-- Post Detail ends -->
 
 <!-- Similar post -->
 <h4>Similar Post</h4>
 <div class="row">
-  <div class="col xl8 l8 m12 s12">
+  <div class="col s12">
     {% for post in similar_post %}
     <div class="card horizontal">
       <div class="card-image">
@@ -70,8 +69,7 @@
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <span class="card-title">{{ post.title|truncatewords:3 }}</span>
-          <p> {{ post.body|markdown|truncatewords:15 }}</p>
+          <span class="card-title">{{ post.title|truncatewords:5 }}</span>
         </div>
       </div>
     </div>
@@ -94,7 +92,7 @@
         {% for comment in comments %}
         <tr>
           <th>{{ comment.name }}</th>
-          <th>{{ comment.created }}</th>
+          <th>{{ comment.created.year}}</th>
           <th>{{ comment.body|linebreaks }}</th>
         </tr>
         {% empty %}

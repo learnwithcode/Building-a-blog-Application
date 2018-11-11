@@ -1,24 +1,20 @@
-{% extends "blog/base.html" %}
-{% load blog_tags %}
-
-{% block title %}blOgeN{% endblock %}
-
+{% extends "blog/base.html" %} 
+{% load blog_tags %} 
+{% block title %}blOgeN{% endblock %} 
 {% block content %}
-<div class="container">
-{% include 'blog/post/search.html' %}
+  {% include 'blog/post/search.html' %}
 
-<!-- POST WITH TAGS HEDING -->
-{% if tag %}
-<div class="card-panel teal lighten-2">
-  <h4 class="center white-text">Posts tagged with "{{ tag.name }}"</h4>
-</div>
-{% endif %}
-<!-- POST WITH TAGS HEDING ENDS -->
+  <!-- POST WITH TAGS HEDING -->
+  {% if tag %}
+  <div class="card-panel teal lighten-2">
+    <h4 class="center white-text">Posts tagged with "{{ tag.name }}"</h4>
+  </div>
+  {% endif %}
+  <!-- POST WITH TAGS HEDING ENDS -->
 
-{% for post in posts %}
-{% include 'blog/post/list_snippet.html' %}
-{% endfor %}
+  {% for post in posts %} 
+  {% include 'blog/post/list_snippet.html' %} 
+  {% endfor %} 
+  {% include 'pagination.html' with page=posts %}
 
-{% include 'pagination.html' with page=posts %}
-</div>
 {% endblock %}

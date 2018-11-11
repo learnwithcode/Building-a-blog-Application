@@ -18,7 +18,6 @@
                 </div>
                 <div class="card-content">
                     <span class="card-title">{{ post.title }}</span>
-                    <p>{{ post.body|markdown|truncatewords:20 }}</p>
                     <div class="card-action">
                         <a href="{{ post.get_absolute_url }}" class="center">Read</a>
                     </div>

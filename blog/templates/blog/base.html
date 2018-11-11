@@ -26,13 +26,21 @@
   <!-- Nav bar ends -->
 
   <div class="row">
-    <div class="col xl5 l5  m5 s12">
-      <div class="card-panel teal lighten-2">
-        <h5 class="center white-text">Total Posts {% total_tags %}</h5>
-        {% show_latest_post %}
-      </div>
-      <div class="card-panel teal lighten-2">
-        <h5 class="white-text center">Most Commented Post</h5>
+    <div class="col xl3 l3  m3 s12">
+      <h5 class="center flow-text">Total Post {% total_tags %}</h5> 
+      {% show_latest_post %}
+    </div>
+
+
+    <div class="col xl6 l6 m6 s12">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+
+
+    <div class="col xl3 l3  m3 s12">       
+        <h5 class="center flow-text">Most Commented Post</h5>
         <div class="collection">
           {% get_most_commented_posts as most_commented_posts %}
           {% for post in most_commented_posts %}
@@ -40,15 +48,10 @@
             <span class="badge new" data-badge-caption="comment">{{ post.comments.count }}</span> {{ post.title }}</a>
           {% endfor %}
         </div>
-      </div>
-    </div>
-
-
-    <div class="col xl7 l7 m7 s12">
-      {% block content %}
-      {% endblock %}
+    
     </div>
   </div>
+
 
 
 
