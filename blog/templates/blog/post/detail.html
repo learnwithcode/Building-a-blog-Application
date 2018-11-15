@@ -41,10 +41,17 @@
 
 <!-- Post Detail -->
 <h4>{{ post.title }}</h4>
-<p class="date">
-  Published {{ post.publish }} by {{ post.author }}
-</p>
-{{ post.body|markdown }}
+      <p class="grey-text">
+        <i class="material-icons">person</i>
+        {{ post.author }} 
+        <i class="material-icons">publish</i>
+        {{ post.publish }} 
+        <i class="material-icons">comment</i>
+        {{ post.comments.count }}
+      </p>
+      <hr />
+<p>      
+{{ post.body|markdown|safe }}
 <p>
   <a href="{% url 'blog:post_share' post.id %}" class="btn-large right waves-effect waves-light waves-light  z-depth-5">
     <i class="material-icons right">screen_share</i>Share</a>

@@ -46,16 +46,16 @@
         </a>
       </div>
       {% endfor %}
-      <h6>
-        <i class="material-icons">publish</i>
-        {{ post.publish }}
-      </h6>
-      <h6>
+      <p class="grey-text">
         <i class="material-icons">person</i>
-        {{ post.author }}
-      </h6>
+        {{ post.author }} 
+        <i class="material-icons">publish</i>
+        {{ post.publish }} 
+        <i class="material-icons">comment</i>
+        {{ post.comments.count }}
+      </p>
       <hr />
-      <p>{{ post.body|markdown|truncatewords_html:100 }}</p>
+      <p>{{ post.body|markdown|safe|truncatewords_html:100 }}</p>
     </div>
     <!-- Card reaveal ends -->
     <!-- Card action -->
