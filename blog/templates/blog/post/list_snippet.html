@@ -48,9 +48,9 @@
       {% endfor %}
       <p class="grey-text">
         <i class="material-icons">person</i>
-        {{ post.author }} 
+        {{ post.author }} |
         <i class="material-icons">publish</i>
-        {{ post.publish }} 
+        {{ post.publish.year }}/{{ post.publish.month }} | 
         <i class="material-icons">comment</i>
         {{ post.comments.count }}
       </p>
